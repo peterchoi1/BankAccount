@@ -57,7 +57,6 @@ public class Mainline {
 //              checking1.id = 10;
 //              checking1.balance = 1.00;
         int checking1Id = checking1.getId();
-        System.out.println(checking1Id);
         checking1.setDescription("Checking 1");
         checking1.withdraw(100.00); // bal 0
         checking1.deposit(500.00); // bal 500
@@ -72,7 +71,6 @@ public class Mainline {
 //              checking2.id = 20;
 //              checking2.balance = 2.00;
         int checking2Id = checking2.getId();
-        System.out.println(checking2Id);
         checking2.setDescription("Checking 1");
         checking2.withdraw(100.00); // bal 0
         checking2.deposit(500.00); // bal 500
@@ -87,7 +85,6 @@ public class Mainline {
 //              savings3.id = 20;
 //              savings3.balance = 2.00;
         int savings3Id = savings3.getId();
-        System.out.println(savings3Id);
         savings3.setDescription("Checking 1");
         savings3.withdraw(100.00); // bal 0
         savings3.deposit(300.00); // bal 300
