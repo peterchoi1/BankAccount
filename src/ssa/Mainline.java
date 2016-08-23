@@ -5,35 +5,52 @@ public class Mainline {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-        Account checking = new Account(500.00); //constructor for initial balance
-        checking.setAccountId(100); //setting account ID
-        checking.setDescription("My personal checking account"); //setting account descriptions
+        Account checking1 = new Account();
+        checking1.setDescription("My personal checking account");
+        checking1.balance = 800.00;
+        checking1.print();
+        checking1.deposit(300.00);
+        checking1.print();
+        checking1.withdraw(699.99);
+        checking1.print();
+        checking1.deposit(149.99);
+        checking1.print();
+        checking1.withdraw(950.00); // this should fail!
+        checking1.print();
+        checking1.withdraw(200.00);
+        checking1.print(); // balance should be 350
+        //
+        Account savings1 = new Account("My personal savings account");
+        savings1.deposit(1000.00);
+        savings1.print();
+        savings1.deposit(400.00);
+        savings1.print();
+        savings1.withdraw(750.00);
+        savings1.print();
+        savings1.withdraw(250.00);
+        savings1.print();
+        savings1.deposit(650.00);
+        savings1.print(); // balance should be 1050.00
+        // the transfer
+        checking1.transferFrom(savings1, 100.00); // transfer 100 from savings to checking
+        
+        // another account
+        Account checking2 = new Account("My slush fund checking account");
+        checking2.deposit(300.00);
+        checking2.print();
+        checking2.withdraw(150.00);
+        checking2.print();
+        checking2.deposit(250.00);
+        checking2.print();
 
-        Account savings = new Account(1000.00); //constructor for initial balance
-        savings.setAccountId(200);//setting account ID
-        savings.setDescription("My personal savings account");//setting account descriptions
+        // more to come. Will be updated during the lab...*
 
-        checking.deposit(200.00);
+        // print out all account balances
+        checking1.print();
+        checking2.print();
+        savings1.print();
+        
 
-        checking.withdraw(600.00);
-
-        checking.deposit(100.00);
-
-        checking.withdraw(300.00);
-
-        checking.withdraw(200.00);
-
-        savings.withdraw(750.00);
-
-        savings.withdraw(250.00);
-
-        savings.deposit(200.00);
-
-        savings.transferBalance(100.00, checking); //transferring $100.00 from savings to checking
-
-        checking.checkBalanceHistory(); //displays all past transactions for checking
-        savings.checkBalanceHistory(); //displays all past transactions for savings
-
-    }
+   }
 
 }
