@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Account {
 
     private int accountId; //local variable account ID for each object
-    private String description; //local variable account ID for each object
-    double balance; //local variable account ID for each object
+    private String description;
+    private double balance; 
     private DecimalFormat df = new DecimalFormat("$0.00"); //decimal format used for each $ amount
     //private ArrayList<String> accountBalanceChanges = new ArrayList<String>(); //holds all past transactions for each object
     private static ArrayList<Integer> accountIdList = new ArrayList<Integer>();
@@ -75,7 +75,7 @@ public class Account {
     //prints out the user's account status such as ID and balance
     String print() {
         
-        return "Account " + getAccountId() + " balance is " + df.format(getBalance()); 
+        return "Account " + getId() + " balance is " + df.format(getBalance()); 
 
         
 //        System.out.println("User's Account ID : " + getAccountId() + "\nDescription: " + getDescription()
@@ -92,7 +92,7 @@ public class Account {
     }
 
     //returns the account ID
-    int getAccountId() {
+    int getId() {
         return this.accountId;
     }
 
