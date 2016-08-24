@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Account {
 
-    private int accountId; //local variable account ID for each object
+    private int id; //local variable account ID for each object
     private String description;
     private double balance; 
     private DecimalFormat df = new DecimalFormat("$0.00"); //decimal format used for each $ amount
@@ -16,7 +16,7 @@ public class Account {
 
     
     public Account() {
-        setAccountId(count);
+        setId(count);
         accountIdList.add(count);
         count++;
         
@@ -24,7 +24,7 @@ public class Account {
     
     
     public Account(String description) {
-        setAccountId(count);
+        setId(count);
         setDescription(description);
         accountIdList.add(count);
         count++;
@@ -39,7 +39,7 @@ public class Account {
             id++;
             duplicateFound = true;
         } else { 
-            setAccountId(id);
+            setId(id);
             setDescription(description);
             accountIdList.add(id);
             duplicateFound = false;
@@ -87,13 +87,13 @@ public class Account {
     }
 
     //sets the account ID
-    private void setAccountId(int accountId) {
-        this.accountId = accountId;
+    private void setId(int id) {
+        this.id = id;
     }
 
     //returns the account ID
     int getId() {
-        return this.accountId;
+        return this.id;
     }
 
     //setting the account description
