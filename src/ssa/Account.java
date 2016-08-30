@@ -16,7 +16,7 @@ public class Account {
     private static ArrayList<Integer> accountIdList = new ArrayList<Integer>();
     
     // used within the constructor for auto generating an Id                                              
-    private static int count = 1; 
+    private static Integer count = 1; 
     
     // this constructor automatically sets the account id
     public Account() {
