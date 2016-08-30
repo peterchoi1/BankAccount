@@ -63,8 +63,8 @@ public class Account {
     // adds the transaction to the arraylist
     void transferFrom(Account toAccount, double transferAmount) {
         if (checkTransfer(transferAmount) == (true)) {
-            toAccount.balance -= transferAmount;
-            this.balance += transferAmount;
+            this.balance -= transferAmount;
+            toAccount.balance += transferAmount;
 
         } else {
         }
