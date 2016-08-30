@@ -6,8 +6,9 @@ import org.junit.Test;
 
 public class AllTests {
 
+    
     @Test
-    public void test() {
+    public void testAccounts() {
         Account account1 = new Account();
         Account account2 = new Account();
         Savings savings1 = new Savings();
